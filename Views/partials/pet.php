@@ -1,6 +1,6 @@
 <?php
 //var_dump($foods);
-var_dump($accessories);
+//var_dump($accessories);
 ?>
 
 <body>
