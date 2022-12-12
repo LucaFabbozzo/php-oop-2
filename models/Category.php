@@ -9,7 +9,7 @@ class Category
    * @param string $name
    * @param string $icon
    */
-  public function __construct($_name, $_icon = null )
+  public function __construct($_name, $_icon )
   {
     $this->name = $_name;
     $this->icon = $_icon;

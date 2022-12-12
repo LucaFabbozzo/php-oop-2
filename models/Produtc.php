@@ -8,6 +8,7 @@ class Product
   public $brand;
   public $category;
   public $price;
+  public $discount = 0;
   public $isAvailable;
   public $poster;
 
@@ -33,5 +34,19 @@ public function __construct($_id, $_name, $_brand, Category $_category, $_price,
 
   public function get_product_details() {
     return "Prodotto: $this->name, Marca: $this->brand";
+  }
+
+  public function setDiscount($_discount)
+  {
+    $this->discount = $_discount;
+  }
+
+  public function getPrice()
+  {
+    $finalPrice = $this->price;
+    if ($this->discount != 0) {
+      $finalPrice *= (1 - ($this->discount / 100));
+    }
+    return number_format($finalPrice, 2, ',', '.');
   }
 }

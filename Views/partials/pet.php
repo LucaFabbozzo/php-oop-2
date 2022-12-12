@@ -12,13 +12,14 @@ var_dump($accessories);
         <?php foreach ($foods as $pet) : ?>
           <div class="col-6 mb-5">
             <div class="card">
-              <img src="<?php echo $pet->poster ?>" class="card-img-top" alt="...">
+              <img class="thumbnail" src="<?php echo $pet->poster ?>" class="card-img-top" alt="...">
               <div class="card-body">
+                <span><?php echo $pet->category->icon ?></span>
                 <h5 class="card-title"><?php echo $pet->name ?></h5>
                 <p class="card-text"><?php echo $pet->brand ?></p>
                 <p class="card-text">Ingredienti: <?php echo $pet->ingredients ?></p>
                 <p class="card-text"><?php echo $pet->taste ?></p>
-                <p class="card-text">&euro; <?php echo $pet->price ?></p>
+                <p class="card-text">&euro; <?php echo $pet->getPrice() ?></p>
               </div>
             </div>
           </div>
@@ -32,12 +33,13 @@ var_dump($accessories);
         <?php foreach ($accessories as $pet) : ?>
           <div class="col-6 mb-5">
             <div class="card">
-              <img src="<?php echo $pet->poster ?>" class="card-img-top" alt="...">
+              <img class="thumbnail" src="<?php echo $pet->poster ?>" class="card-img-top" alt="...">
               <div class="card-body">
+                <span><?php echo $pet->category->icon ?></span>
                 <h5 class="card-title"><?php echo $pet->name ?></h5>
                 <p class="card-text"><?php echo $pet->name ?></p>
                 <p class="card-text">Taglia: <?php echo $pet->size ?></p>
-                <p class="card-text">&euro; <?php echo $pet->price ?></p>
+                <p class="card-text">&euro; <?php echo $pet->getPrice() ?></p>
               </div>
             </div>
           </div>
