@@ -7,6 +7,20 @@ Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, 
 Allego lo schema fatto in classe (da considerarsi a titolo indicativo ma potete personalizzare come credete)
  -->
 
- 
+ <?php
+
+  include_once './models/Produtc.php';
+  include_once './models/Category.php';
+  include_once './models/Accessory.php';
+  include_once './models/Food.php';
+  include_once './models/Toy.php';
+
+
+
+  $food1 = new Food(123, 'Crocchette', 'Rocky Cat', new Category('Gatto'), 12, True, null, 200, 'Pesce', 'normale');
+
+  var_dump($food1);
+
+?>
 
 
