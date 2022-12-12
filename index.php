@@ -9,18 +9,19 @@ Allego lo schema fatto in classe (da considerarsi a titolo indicativo ma potete 
 
  <?php
 
-  include_once './models/Produtc.php';
-  include_once './models/Category.php';
-  include_once './models/Accessory.php';
-  include_once './models/Food.php';
-  include_once './models/Toy.php';
+
+  //db
+  require_once __DIR__ . '/Database/db.php';
 
 
+  // views
+  require_once __DIR__ . '/Views/layout/footer.php';
+  require_once __DIR__ . '/Views/layout/head.php';
+  require_once __DIR__ . '/Views/layout/header.php';
+  require_once __DIR__ . '/Views/partials/pet.php';
 
-  $food1 = new Food(123, 'Crocchette', 'Rocky Cat', new Category('Gatto'), 12, True, null, 200, 'Pesce', 'normale');
+  ?>
 
-  var_dump($food1);
 
-?>
 
 
