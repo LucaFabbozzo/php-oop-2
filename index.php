@@ -15,10 +15,9 @@ Allego lo schema fatto in classe (da considerarsi a titolo indicativo ma potete 
 
 
   // views
+  require_once __DIR__ . '/Views/layout/head.php';require_once __DIR__ . '/Views/layout/header.php'; require_once __DIR__ . '/Views/partials/pet.php';
   require_once __DIR__ . '/Views/layout/footer.php';
-  require_once __DIR__ . '/Views/layout/head.php';
-  require_once __DIR__ . '/Views/layout/header.php';
-  require_once __DIR__ . '/Views/partials/pet.php';
+ 
 
   ?>
 
