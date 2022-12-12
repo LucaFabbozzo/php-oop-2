@@ -8,7 +8,7 @@ class Product
   public $brand;
   public $category;
   public $price;
-  public $discount = 0;
+  private $discount = 0;
   public $isAvailable;
   public $poster;
 
